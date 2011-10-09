@@ -1,2 +1,13 @@
 /bin/
 /gen/
+
+# Private project properties #
+nbproject/private
+
+# Class Files #
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
