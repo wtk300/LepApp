@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="net.andruszko.lepapp"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:label="@string/app_name" android:icon="@drawable/icon" android:name="net.andruszko.lepapp.LepApplication">
+        <activity android:name="LepActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PreferencesActivity">
+            <intent-filter>
+                <action android:name="net.andruszko.intent.action.preferences"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="RandomLepItemActivity">
+            <intent-filter>
+                <action android:name="net.andruszko.intent.action.randomlepitem"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest> 

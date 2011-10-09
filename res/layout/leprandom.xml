@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/ScrollView01"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainBackground"
+    >   
+      <TextView style="@style/topLabelStyle"       
+        android:id="@+id/randomTopLabel">
+    </TextView>
+<!--    
+        <Spinner android:id="@+id/sessionsSpinner"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:drawSelectorOnTop="true">
+        </Spinner>-->
+        <TextView android:id="@+id/question"
+              style="@style/mainLabelStyle">
+        </TextView>
+    
+        <RadioGroup android:id="@+id/randomRG"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:orientation="vertical">
+        
+            <RadioButton android:id="@+id/answer_a"
+                     style="@style/questionRadioButtonStyle">                               
+            </RadioButton>
+        
+            <RadioButton android:id="@+id/answer_b"
+                     style="@style/questionRadioButtonStyle"
+                     android:text="Odpowiedz B">            
+            </RadioButton>
+        
+            <RadioButton android:id="@+id/answer_c"
+                    style="@style/questionRadioButtonStyle"
+                     android:text="Odpowiedz C">            
+            </RadioButton>
+        
+            <RadioButton android:id="@+id/answer_d"
+                    style="@style/questionRadioButtonStyle"
+                     android:text="Odpowiedz D">            
+            </RadioButton>
+        
+        
+            <RadioButton android:id="@+id/answer_e"
+                     style="@style/questionRadioButtonStyle" 
+                     android:text="Odpowiedz E">            
+            </RadioButton>
+           
+        
+        </RadioGroup>
+    
+        <Button android:text="@string/check" android:id="@+id/checkBtn"
+		android:layout_width="wrap_content" android:layout_height="wrap_content">
+        </Button>
+        <Button android:text="@string/random" android:id="@+id/randomBtn"
+		android:layout_width="wrap_content" android:layout_height="wrap_content">
+        </Button>
+    
+    
+    </LinearLayout>
+</ScrollView>
+

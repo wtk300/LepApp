@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    
+    <string-array name="session_items">        
+        <item>wrzesień 2008</item>
+        <item>luty 2009</item>
+        <item>wrzesień 2009</item>
+        <item>luty 2011</item>        
+    </string-array>
+    
+    
+        
+    <string-array name="lang">        
+        <item>PL</item>
+        <item>EN</item>        
+    </string-array>
+    
+     <string-array name="lepType">        
+        <item>LEP</item>
+        <item>LDEP</item>        
+    </string-array>
+    
+    <string-array name="subSection">        
+        <item>Wszystkie</item>
+        <item>Pediatria</item>        
+    </string-array>
+    
+    
+    <string-array name="question_size_font_values">
+        <item>15</item>
+        <item>17</item>
+        <item>19</item>
+        <item>21</item>
+        <item>23</item>
+    </string-array>
+    
+    <string-array name="question_size_font_options">        
+        <item>wielkość czcionki 15</item>
+        <item>wielkość czcionki 17</item>
+        <item>wielkość czcionki 19</item>
+        <item>wielkość czcionki 21</item>
+        <item>wielkość czcionki 23</item>        
+    </string-array>
+    
+
+  
+       
+</resources>
+

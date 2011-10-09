@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="Dane usługi">
+		<EditTextPreference android:key="PREF_CLIENT_FIRSTNAME"
+			android:title="Imię" android:summary="Imię"
+			android:defaultValue=""/>
+
+		<EditTextPreference android:key="PREF_CLIENT_LASTNAME"
+			android:title="Nazwisko" android:summary="Nazwisko"
+			android:defaultValue=""/>
+                        
+                        
+
+                <ListPreference android:key="PREF_QUESTION_FONT_SIZE"
+			android:title="Wielkość czcionki pytania" android:summary="Wielkość czcionki pytania"
+			android:entries="@array/question_size_font_options" android:entryValues="@array/question_size_font_values"
+			android:dialogTitle="Paczki" android:defaultValue="15" />
+
+	</PreferenceCategory>
+
+</PreferenceScreen>

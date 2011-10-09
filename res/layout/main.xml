@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"    
+    android:background="@color/mainBackground"
+    
+    >   
+    
+    <TextView style="@style/topLabelStyle"       
+        android:text="LepApp">
+    </TextView>
+    
+
+
+    <TextView style="@style/mainLabelStyle"       
+        android:text="Wybierz sesję">
+    </TextView>
+    
+    <Spinner android:id="@+id/sessionsSpinner"
+         android:layout_width="fill_parent" 
+         android:layout_height="wrap_content"
+         android:drawSelectorOnTop="true">                    
+    </Spinner>
+
+    <TextView style="@style/mainLabelStyle" 
+         android:text="Wybierz język ">
+    </TextView>
+    
+    <Spinner android:id="@+id/langSpinner"
+	 android:layout_width="fill_parent" 
+         android:layout_height="wrap_content"
+	 android:drawSelectorOnTop="true">                    
+    </Spinner>
+    
+    <TextView style="@style/mainLabelStyle" 
+         android:text="Wybierz typ egzaminu">
+    </TextView>
+    
+    <Spinner android:id="@+id/lepTypeSpinner"
+	 android:layout_width="fill_parent" 
+         android:layout_height="wrap_content"
+	 android:drawSelectorOnTop="true">                    
+    </Spinner>
+    
+    <TextView android:id="@+id/subSectionLabel"
+         style="@style/mainLabelStyle" 
+         android:text="Wybierz poddział">
+    </TextView>
+    
+    <Spinner android:id="@+id/subSectionSpinner"
+	 android:layout_width="fill_parent" 
+         android:layout_height="wrap_content"
+	 android:drawSelectorOnTop="true">                    
+    </Spinner>
+    
+    
+   
+    <Button android:text="@string/startRandomActivity" 
+            android:id="@+id/startRandomActivity"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content">
+    </Button>
+    
+
+    
+    
+</LinearLayout>
+
