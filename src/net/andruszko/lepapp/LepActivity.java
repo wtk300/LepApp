@@ -49,6 +49,8 @@ public class LepActivity extends RoboActivity {
     public static final String[] lepType = new String[]{"LEP", "LDEP"};
 
     private void loadProferences() {
+        
+        Ln.v("brach test");
         int subSectionPosition = sharedPreferences.getInt(PreferenceNames.PREF_SUBSECIION_VALUE, 0);
         int sessionPosition = sharedPreferences.getInt(PreferenceNames.PREF_SESSION_VALUE, 0);
         int langPosition = sharedPreferences.getInt(PreferenceNames.PREF_LANG_VALUE, 0);
