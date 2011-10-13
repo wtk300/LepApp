@@ -87,8 +87,8 @@ public class RandomLepItemActivity extends RoboActivity {
             rb.setTextColor(getColor(R.color.Black));
         }
     }
-    
-    private void showInfo(String info){
+
+    private void showInfo(String info) {
         Toast toast = Toast.makeText(ctx, info, Toast.LENGTH_SHORT);
         toast.show();
     }
@@ -106,7 +106,8 @@ public class RandomLepItemActivity extends RoboActivity {
         Intent preferenceIntent = getIntent();
 
         if (preferenceIntent != null) {
-             showInfo(preferenceIntent.getStringExtra("sessionId"));
+            Bundle extras = preferenceIntent.getExtras();
+            showInfo(extras.getString(BundleConstants.SESSION_ID));
         }
 
         //question.setTextSize(Float.parseFloat(getSharedPreferences(PreferenceNames.PREF_QUESTION_FONT_SIZE, Activity.MODE_PRIVATE)));
@@ -129,7 +130,7 @@ public class RandomLepItemActivity extends RoboActivity {
                      */
                     if (choosenAns == lepItem.getCorrectAns()) {
                         choosenRB.setTextColor(getColor(R.color.lepGreen));
-                        showInfo( "Poprawna odpowiedź");                        
+                        showInfo("Poprawna odpowiedź");
 
                     } else { // user jest jelopem i zle odpowiedzial
                         choosenRB.setTextColor(getColor(R.color.Red));

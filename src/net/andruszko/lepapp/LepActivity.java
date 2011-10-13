@@ -151,14 +151,17 @@ public class LepActivity extends RoboActivity {
 
             public void onClick(View arg0) {
                 Intent startIntent = new Intent(ActivityMetadata.RANDOMLEPITEM_ACTIVITY_URL);
-                startIntent.putExtra("sessionId",""+subSectionSpinner.getSelectedItemPosition());
-                //startIntent.putExtras(Bundle.EMPTY)
+                startIntent.putExtras(createBundle());                
                 startActivity(startIntent);
                 savePreferences();
             }
-        });
-        
-        
-                
+        });               
     }
+    
+    private Bundle createBundle(){
+        Bundle bundle = new Bundle();
+        bundle.putString(BundleConstants.SESSION_ID,""+subSectionSpinner.getSelectedItemPosition());
+        return bundle;
+    }
+
 }
