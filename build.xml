@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="LEPapp" default="help">
+<project name="LepApp" default="help">
 
 <!-- The local.properties file is created and updated by the 'android'
      tool.
@@ -24,6 +24,8 @@
          application and should be checked into Version Control Systems.
 
          -->
+         
+        <property file="project.properties" />     
     <property file="build.properties" />
 
     <!-- The default.properties file is created and updated by the 'android'

@@ -54,6 +54,7 @@ public class RandomLepItemActivity extends RoboActivity {
     private LepItemVO lepItem;
     @Inject
     private RandomLepItemService randomItemService;
+    
     private static final Map<Integer, Integer> ansMap = new HashMap<Integer, Integer>();
 
     static {
@@ -107,7 +108,7 @@ public class RandomLepItemActivity extends RoboActivity {
 
         if (preferenceIntent != null) {
             Bundle extras = preferenceIntent.getExtras();
-            showInfo(extras.getString(BundleConstants.SESSION_ID));
+            showInfo(""+extras.getInt(BundleConstants.LANG_ID));
         }
 
         //question.setTextSize(Float.parseFloat(getSharedPreferences(PreferenceNames.PREF_QUESTION_FONT_SIZE, Activity.MODE_PRIVATE)));

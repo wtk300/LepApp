@@ -11,3 +11,4 @@ nbproject/private
 *.jar
 *.war
 *.ear
+/nbandroid/

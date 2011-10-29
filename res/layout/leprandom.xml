@@ -10,14 +10,12 @@
         android:layout_height="wrap_content"
         android:background="@color/mainBackground"
     >   
-      <TextView style="@style/topLabelStyle"       
-        android:id="@+id/randomTopLabel">
-    </TextView>
-<!--    
-        <Spinner android:id="@+id/sessionsSpinner"
-		android:layout_width="fill_parent" android:layout_height="wrap_content"
-		android:drawSelectorOnTop="true">
-        </Spinner>-->
+        <TextView style="@style/topLabelStyle"       
+            android:id="@+id/randomTopLabel">
+        </TextView>
+        
+        
+
         <TextView android:id="@+id/question"
               style="@style/mainLabelStyle">
         </TextView>

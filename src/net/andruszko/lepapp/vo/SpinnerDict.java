@@ -34,5 +34,10 @@ public class SpinnerDict {
     public void setId(Integer id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return descrition;
+    }
     
 }

@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.google.inject.Inject;
 import net.andruszko.lepapp.utils.ActivityMetadata;
 import net.andruszko.lepapp.utils.PreferenceNames;
+import net.andruszko.lepapp.vo.SpinnerDict;
 import roboguice.activity.RoboActivity;
 import roboguice.inject.InjectView;
 import roboguice.util.Ln;
@@ -45,9 +46,11 @@ public class LepActivity extends RoboActivity {
  
     
     public static final String[] subSection = new String[]{"Wszystkie", "Interna", "Pediatria", "Chirurgia", "Ginekologia i Położnictow", "Med. rodzinna", "Psychiatria", "Med. Ratunkowa i Intensywna", "Prawo med. i bioetyka", "Orzecznictwo", "Zdrowie publiczne"};
-    public static final String[] lang = new String[]{"PL", "EN"};
-    public static final String[] lepType = new String[]{"LEP", "LDEP"};
-
+    //public static final String[] lang = new String[]{"PL", "EN"};
+    public static final SpinnerDict[] lang = new SpinnerDict[]{new SpinnerDict(10, "PL"), new SpinnerDict(20,"EN")};
+    //public static final String[] lepType = new String[]{"LEP", "LDEP"};
+    public static final SpinnerDict[] lepType = new SpinnerDict[]{new SpinnerDict(10,"LEP"), new SpinnerDict(20,"LDEP")};
+    
     private void loadProferences() {
         
         Ln.v("brach test");
@@ -108,20 +111,20 @@ public class LepActivity extends RoboActivity {
         
         ArrayAdapter<CharSequence> sessionAdapter = ArrayAdapter.createFromResource(this, R.array.session_items, android.R.layout.simple_spinner_item);
         sessionSpinner.setAdapter(sessionAdapter);
-        sessionSpinner.setPrompt("Sessja");
+        sessionSpinner.setPrompt("Sesja");
 
-        ArrayAdapter<String> langAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, lang);
+        ArrayAdapter<SpinnerDict> langAdapter = new ArrayAdapter<SpinnerDict>(this, android.R.layout.simple_spinner_item, lang);
         langSpinner.setAdapter(langAdapter);
         langSpinner.setPrompt("Język");
 
-        ArrayAdapter<String> lepTypeAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, lepType);
+        ArrayAdapter<SpinnerDict> lepTypeAdapter = new ArrayAdapter<SpinnerDict>(this, android.R.layout.simple_spinner_item, lepType);
         lepTypeSpinner.setAdapter(lepTypeAdapter);
         lepTypeSpinner.setPrompt("Typ egzaminu");
         lepTypeSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
 
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 
-                if (lepType[position].equals("LEP")){
+                if (lepType[position].getId().equals(10)){
                     showLepSubSections();
                 }else{
                     hideLepSubSections();
@@ -135,16 +138,7 @@ public class LepActivity extends RoboActivity {
         ArrayAdapter<String> subSectionAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, subSection);
         subSectionSpinner.setAdapter(subSectionAdapter);
         subSectionSpinner.setPrompt("Poddział");
-        subSectionSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
-
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            }
-
-            public void onNothingSelected(AdapterView<?> arg0) {
-            }
-        });
-
-
+    
         loadProferences();
 
         startRandomLepBtn.setOnClickListener(new OnClickListener() {
@@ -160,7 +154,7 @@ public class LepActivity extends RoboActivity {
     
     private Bundle createBundle(){
         Bundle bundle = new Bundle();
-        bundle.putString(BundleConstants.SESSION_ID,""+subSectionSpinner.getSelectedItemPosition());
+        bundle.putInt(BundleConstants.LANG_ID,lang[langSpinner.getSelectedItemPosition()].getId());
         return bundle;
     }
 
